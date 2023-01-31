@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'on_boarding_slide.dart';
 
 class OnBoarding extends StatefulWidget {
   const OnBoarding({super.key});
@@ -10,10 +11,26 @@ class OnBoarding extends StatefulWidget {
 class _OnBoardingState extends State<OnBoarding> {
   int currentePage = 0;
   List<Map<String, String>> listBoarding = [
-    {"titulo": "Cualquier dato :D", "imagen": ""},
-    {"titulo": "Titulo 1", "imagen": ""},
-    {"titulo": "Titulo 2", "imagen": ""},
-    {"titulo": "Titulo 3", "imagen": ""}
+    {
+      "titulo": "Titulo",
+      "imagen": "assets/images/Naruto.jpg",
+      "descripcion": "Naruto de mi fondo de pantalla"
+    },
+    {
+      "titulo": "Titulo 1",
+      "imagen": "assets/images/Naruto2.jpg",
+      "descripcion": "Naruto salundo, igual de fondo de pantalla"
+    },
+    {
+      "titulo": "Titulo 2",
+      "imagen": "assets/images/Naruto3.jpg",
+      "descripcion": "Naruto chiquito"
+    },
+    {
+      "titulo": "Titulo 3",
+      "imagen": "assets/images/Naruto4.jpg",
+      "descripcion": "Naruto Ochiha"
+    }
   ];
 
   @override
@@ -22,32 +39,13 @@ class _OnBoardingState extends State<OnBoarding> {
       child: Column(children: [
         Expanded(
           flex: 20,
-          child: Padding(
-            padding: const EdgeInsets.only(top: 100),
-            child: Column(
-              children: const [
-                Text(
-                  "Titulo",
-                  style: TextStyle(
-                    fontSize: 40.0,
-                  ),
-                ),
-                Image(
-                  image: AssetImage('assets/images/img.jpg'),
-                  // width: 300,
-                  // height: 200,
-                ),
-                Padding(
-                  padding: EdgeInsets.only(top: 100),
-                  child: Text(
-                    "lorem ipsum(30)",
-                    style: TextStyle(
-                      fontSize: 25.0,
-                    ),
-                  ),
-                ),
-              ],
+          child: PageView.builder(
+            itemBuilder: (context, index) => OnBoardingSlide(
+              titulo: listBoarding[index]["titulo"],
+              imagen: listBoarding[index]["imagen"],
+              descripcion: listBoarding[index]["descripcion"],
             ),
+            itemCount: listBoarding.length,
           ),
         ),
         const Expanded(
