@@ -9,33 +9,29 @@ class OnBoardingSlide extends StatelessWidget {
   Widget build(
     BuildContext context,
   ) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 100),
-      child: Column(
-        children: [
-          Text(
-            titulo!,
-            style: const TextStyle(
-              fontSize: 40.0,
-            ),
+    return Column(
+      children: [
+        Image(
+          image: AssetImage(imagen!),
+          width: 400,
+          height: 300,
+        ),
+        Text(
+          titulo!,
+          style: const TextStyle(
+            fontSize: 40.0,
+            color: Colors.purple,
           ),
-          Padding(
-            padding: const EdgeInsets.only(top: 10, bottom: 50),
-            child: Image(
-              image: AssetImage(imagen!),
-              width: 400,
-              height: 300,
-            ),
+        ),
+        Text(
+          descripcion!,
+          textAlign: TextAlign.center,
+          style: const TextStyle(
+            color: Colors.grey,
+            fontSize: 25.0,
           ),
-          Text(
-            descripcion!,
-            textAlign: TextAlign.center,
-            style: const TextStyle(
-              fontSize: 25.0,
-            ),
-          ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }
