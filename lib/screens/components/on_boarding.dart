@@ -1,4 +1,4 @@
-import 'package:fist_app/pages/register/register.dart';
+import 'package:fist_app/pages/Inicio/inicio.dart';
 import 'package:flutter/material.dart';
 import 'on_boarding_slide.dart';
 
@@ -104,7 +104,7 @@ class _OnBoardingState extends State<OnBoarding> {
               onPressed: () async {
                 currentPage == listBoarding.length - 1
                     ? Navigator.push(context,
-                        MaterialPageRoute(builder: (_) => const Register()))
+                        MaterialPageRoute(builder: (_) => const Inicio()))
                     : varController.nextPage(
                         duration: const Duration(milliseconds: 500),
                         curve: Curves.easeInOut);
