@@ -27,13 +27,21 @@ class Inicio extends StatelessWidget {
             flex: 2,
             child: Column(
               children: [
-                const Text(
-                  'Entrar como invitado',
-                  style: TextStyle(color: Colors.pink),
+                const TextButton(
+                  onPressed: null,
+                  child: Text(
+                    'Entrar como invitado',
+                    style: TextStyle(color: Colors.pink),
+                  ),
                 ),
-                const Text(
-                  'Entrar como vendedor',
-                  style: TextStyle(color: Colors.green),
+                const TextButton(
+                  onPressed: null,
+                  child: Text(
+                    'Entrar como vendedor',
+                    style: TextStyle(
+                      color: Colors.green,
+                    ),
+                  ),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,

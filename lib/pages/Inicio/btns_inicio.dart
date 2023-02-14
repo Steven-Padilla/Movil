@@ -1,3 +1,4 @@
+import 'package:fist_app/pages/register/register.dart';
 import 'package:flutter/material.dart';
 import 'package:fist_app/pages/login/login.dart';
 
@@ -8,77 +9,103 @@ class BtnsInicio extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const btnWidth = 300.0;
+    const btnWidth = 350.0;
     const btnHeight = 55.0;
     const btnRadio = 30.0;
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.only(bottom: 10),
-          child: MaterialButton(
-            onPressed: () async {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (_) => const Login()));
-            },
+          padding: const EdgeInsets.only(bottom: 15),
+          child: SizedBox(
             height: btnHeight,
-            minWidth: btnWidth,
-            shape: RoundedRectangleBorder(
-              side: const BorderSide(width: 0, color: Colors.grey),
-              borderRadius: BorderRadius.circular(btnRadio),
-            ),
-            color: Colors.blue,
-            child: const Text(
-              'Continuar con Google',
-              style: TextStyle(
+            width: btnWidth,
+            child: ElevatedButton.icon(
+              icon: const Icon(
+                Icons.g_mobiledata,
                 color: Colors.white,
-                fontWeight: FontWeight.w600,
-                fontSize: 18,
+                size: 35,
+              ),
+              onPressed: () async {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => const Login()));
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blueAccent,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(btnRadio),
+                ),
+                elevation: 5,
+              ),
+              label: const Text(
+                'Continuar con Google     ',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 18,
+                ),
               ),
             ),
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(bottom: 10),
-          child: MaterialButton(
-            onPressed: () async {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (_) => const Login()));
-            },
+          padding: const EdgeInsets.only(bottom: 30),
+          child: SizedBox(
             height: btnHeight,
-            minWidth: btnWidth,
-            shape: RoundedRectangleBorder(
-              side: const BorderSide(width: 0, color: Colors.grey),
-              borderRadius: BorderRadius.circular(btnRadio),
-            ),
-            color: Colors.blueAccent,
-            child: const Text(
-              'Continuar con Facebook',
-              style: TextStyle(
+            width: btnWidth,
+            child: ElevatedButton.icon(
+              icon: const Icon(
+                Icons.facebook,
                 color: Colors.white,
-                fontWeight: FontWeight.w600,
-                fontSize: 18,
+              ),
+              onPressed: () async {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => const Login()));
+              },
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.indigo[900],
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(btnRadio),
+                ),
+                elevation: 5,
+              ),
+              label: const Text(
+                'Continuar con Facebook',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 18,
+                ),
               ),
             ),
           ),
         ),
-        MaterialButton(
-          onPressed: () async {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (_) => const Login()));
-          },
+        SizedBox(
           height: btnHeight,
-          minWidth: btnWidth,
-          shape: RoundedRectangleBorder(
-            side: const BorderSide(width: 3, color: Colors.grey),
-            borderRadius: BorderRadius.circular(btnRadio),
-          ),
-          color: Colors.white,
-          child: const Text(
-            'Continuar con e-mail ',
-            style: TextStyle(
+          width: btnWidth,
+          child: ElevatedButton.icon(
+            icon: const Icon(
+              Icons.mail,
               color: Colors.grey,
-              fontWeight: FontWeight.w600,
-              fontSize: 18,
+            ),
+            onPressed: () async {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (_) => const Register()));
+            },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.white,
+              side: const BorderSide(width: 3, color: Colors.grey),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(btnRadio),
+              ),
+              elevation: 5,
+            ),
+            label: Text(
+              'Continuar con e-mail     ',
+              style: TextStyle(
+                color: Colors.grey[600],
+                fontWeight: FontWeight.w600,
+                fontSize: 18,
+              ),
             ),
           ),
         ),
