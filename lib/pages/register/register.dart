@@ -77,7 +77,7 @@ class _RegisterState extends State<Register> {
                 child: TextField(
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(20)),
+                        borderRadius: BorderRadius.circular(12)),
                     hintText: ('Nombre Completo'),
                   ),
                 ),
@@ -98,7 +98,7 @@ class _RegisterState extends State<Register> {
                 child: TextField(
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(20)),
+                        borderRadius: BorderRadius.circular(12)),
                     hintText: ('Dirección de correo'),
                   ),
                 ),
@@ -130,7 +130,7 @@ class _RegisterState extends State<Register> {
                       },
                     ),
                     border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(20)),
+                        borderRadius: BorderRadius.circular(12)),
                   ),
                   obscureText: passObscureText,
                 ),
@@ -205,7 +205,7 @@ class _RegisterState extends State<Register> {
               side: BorderSide(color: Colors.grey.shade600),
               borderRadius: BorderRadius.circular(30),
             ),
-            color: Colors.green,
+            color: Colors.lightGreen[800],
             child: const Text(
               'Crear cuenta',
               style: TextStyle(

@@ -1,3 +1,4 @@
+import 'package:fist_app/pages/register/recover_pass.dart';
 import 'package:flutter/material.dart';
 
 class Login extends StatelessWidget {
@@ -20,8 +21,8 @@ class Login extends StatelessWidget {
                   child: Padding(
                     padding: const EdgeInsets.only(top: 350),
                     child: Column(
-                      children: const [
-                        Padding(
+                      children: [
+                        const Padding(
                           padding: EdgeInsets.only(bottom: 20),
                           child: TextField(
                             decoration: InputDecoration(
@@ -29,12 +30,20 @@ class Login extends StatelessWidget {
                             ),
                           ),
                         ),
-                        TextField(
+                        const TextField(
                           decoration: InputDecoration(
                             hintText: ('password'),
                           ),
                         ),
-                        
+                        TextButton(
+                          onPressed: () async {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (_) => const RecoveryPass()));
+                          },
+                          child: const Text('Recuperar contraseña'),
+                        )
                       ],
                     ),
                   ),
