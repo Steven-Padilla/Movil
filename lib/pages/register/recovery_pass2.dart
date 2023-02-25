@@ -141,7 +141,7 @@ class _RecoveryPass2State extends State<RecoveryPass2> {
             height: 55,
             minWidth: 350,
             onPressed: () async {
-              Navigator.push(
+              Navigator.pushReplacement(
                   context, MaterialPageRoute(builder: (_) => const Inicio()));
             },
             shape: RoundedRectangleBorder(

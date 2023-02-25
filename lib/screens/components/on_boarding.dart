@@ -103,7 +103,7 @@ class _OnBoardingState extends State<OnBoarding> {
               ),
               onPressed: () async {
                 currentPage == listBoarding.length - 1
-                    ? Navigator.push(context,
+                    ? Navigator.pushReplacement(context,
                         MaterialPageRoute(builder: (_) => const Inicio()))
                     : varController.nextPage(
                         duration: const Duration(milliseconds: 500),

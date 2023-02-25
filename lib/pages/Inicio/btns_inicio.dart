@@ -1,6 +1,7 @@
 import 'package:fist_app/pages/register/register.dart';
 import 'package:flutter/material.dart';
 import 'package:fist_app/pages/login/login.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class BtnsInicio extends StatelessWidget {
   const BtnsInicio({
@@ -20,10 +21,8 @@ class BtnsInicio extends StatelessWidget {
             height: btnHeight,
             width: btnWidth,
             child: ElevatedButton.icon(
-              icon: const Icon(
-                Icons.g_mobiledata,
-                color: Colors.white,
-                size: 35,
+              icon: const FaIcon(
+                FontAwesomeIcons.google,
               ),
               onPressed: () async {
                 Navigator.push(
@@ -53,9 +52,8 @@ class BtnsInicio extends StatelessWidget {
             height: btnHeight,
             width: btnWidth,
             child: ElevatedButton.icon(
-              icon: const Icon(
-                Icons.facebook,
-                color: Colors.white,
+              icon: const FaIcon(
+                FontAwesomeIcons.squareFacebook,
               ),
               onPressed: () async {
                 Navigator.push(

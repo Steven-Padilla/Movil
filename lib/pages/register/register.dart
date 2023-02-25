@@ -198,7 +198,7 @@ class _RegisterState extends State<Register> {
             height: 55,
             minWidth: 350,
             onPressed: () async {
-              Navigator.push(
+              Navigator.pop(
                   context, MaterialPageRoute(builder: (_) => const Inicio()));
             },
             shape: RoundedRectangleBorder(
